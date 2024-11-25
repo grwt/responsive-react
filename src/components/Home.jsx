@@ -18,9 +18,9 @@ const headingOptions= {
     top:['23%','50%'],
     transform : 'translate(-50%,-50%)',
     textTransform:'uppercase',
-    p: ['1','4'],
+    p: ['1','6'],
     size:['1xl','4xl'],
-    zIndex:'1'
+    zIndex:'overlay'
     
     
 

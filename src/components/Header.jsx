@@ -34,11 +34,11 @@ const Header = () => {
 
                 </VStack>
                 <HStack position={'absolute'} bottom={'6'} left={'0'} justifyContent={'space-evenly'} w={'full'}>
-                    <Button colorScheme={'purple'}>
+                    <Button onClick={onClose} colorScheme={'purple'}>
                     <Link to={'/login'}>Log in</Link>
 
                     </Button>
-                    <Button colorScheme={'purple'} variant={'outline'}>
+                    <Button onClick={onClose} colorScheme={'purple'} variant={'outline'}>
                     <Link to={'/signup'}>Sign up</Link>
 
                     </Button>

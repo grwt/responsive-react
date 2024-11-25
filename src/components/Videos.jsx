@@ -20,7 +20,7 @@ const Videos = () => {
   const [videoSrc ,setVideoSrc]=useState(videosArr[0]);
   const [heading,setHeading]=useState(headingsArr[0]);
   return (
-    <Stack direction={["column","row"]} h={"100vh"}>
+    <Stack direction={["column","row"]} h={"95vh"}>
       <VStack w={"full"} h={"100vh"}>
         <video src={videoSrc} style={
           {width:'100%',}
@@ -32,7 +32,7 @@ const Videos = () => {
           <Text>These are random sample video </Text>
         </VStack>
       </VStack>
-      <VStack w={["full","xl"]} p={"8"} spacing={"8"} alignItems={"stretch"} overflowY={"auto"}>
+      <VStack w={["full","xl"]} h={['130vh','100vh']} p={"8"} spacing={"8"} alignItems={"stretch"} overflowY={"auto"}>
         {
         videosArr.map((item,index)=>(
           <Button onClick={()=>{setVideoSrc(item); setHeading(headingsArr[index])}} variant={"ghost"} colorScheme='purple'>Video {index+1}</Button>
