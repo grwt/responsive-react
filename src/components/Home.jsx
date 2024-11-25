@@ -20,6 +20,7 @@ const headingOptions= {
     textTransform:'uppercase',
     p:'4',
     size:'4xl',
+    zIndex:1,
     
 
     
@@ -27,7 +28,7 @@ const headingOptions= {
 
 const Home = () => {
   return (
-  <Box>
+  <Box pointerEvents="auto">
    <MyCarousel/>
    <Container maxW={"container.xl"} minH={'100vh'} p={['8', '16']} >
     <Heading textTransform={"uppercase"} w={"fit-content"} borderBottom={'2px solid'} m='auto' py='2'> Services</Heading> 
@@ -47,7 +48,7 @@ const Home = () => {
 
 
 const MyCarousel=()=>(
-    <Carousel autoPlay infiniteLoop interval={2000} showStatus={false} showThumbs={false} showArrows={false}>
+    <Carousel w ="full" h={['100vh','120vh']}  autoPlay infiniteLoop interval={2000} showStatus={false} showThumbs={false} showArrows={false}>
      <Box w ="full" h={'100vh'} overflowY="auto">
         <Image src={img1} />
         <Heading  bgColor={"blackAlpha.600"} color={'white'} {...headingOptions}>
