@@ -29,7 +29,7 @@ const Home = () => {
   return (
   <Box>
    <MyCarousel/>
-   <Container maxW={"container.xl"} minH={'100vh'} p={['10', '16']} >
+   <Container maxW={"container.xl"} minH={'100vh'} p={['8', '16']} >
     <Heading textTransform={"uppercase"} w={"fit-content"} borderBottom={'2px solid'} m='auto' py='2'> Services</Heading> 
     <Stack h='full' p={'4'} alignItems={'center'} direction={['column','row']}>
        <Image src={img5} h={["56", "350"]} filter={"hue-rotate(-130deg)"}/> 
@@ -47,29 +47,29 @@ const Home = () => {
 
 
 const MyCarousel=()=>(
-    <Carousel autoPlay infiniteLoop interval={1000} showStatus={false} showThumbs={false} showArrows={false}>
-     <Box w ="full" h={'100vh'}>
+    <Carousel autoPlay infiniteLoop interval={2000} showStatus={false} showThumbs={false} showArrows={false}>
+     <Box w ="full" h={'100vh'} overflowY="auto">
         <Image src={img1} />
         <Heading  bgColor={"blackAlpha.600"} color={'white'} {...headingOptions}>
             Watch The Future
         </Heading>
 
      </Box>
-     <Box w ="full" h={'100vh'}>
+     <Box w ="full" h={'100vh'} overflowY="auto">
         <Image src={img2} />
         <Heading bgColor={"whiteAlpha.900"} color={'black'}  {...headingOptions}>
             Future Is Gaming
         </Heading>
 
      </Box>
-     <Box w ="full" h={'100vh'}>
+     <Box w ="full" h={'100vh'} overflowY="auto">
         <Image src={img3} />
         <Heading bgColor={"whiteAlpha.600"} color={'black'}  {...headingOptions}>
             Gaming on console
         </Heading>
 
      </Box>
-     <Box w ="full" h={'100vh'}>
+     <Box w ="full" h={'100vh'} overflowY="auto">
         <Image src={img4} />
         <Heading bgColor={"whiteAlpha.600"} color={'black'}  {...headingOptions}>
              Night Gaming 
