@@ -15,12 +15,13 @@ import img5 from '../assets/5.png';
 const headingOptions= {
     pos:'absolute',
     left:'50%',
-    top:'50%',
+    top:['23%','50%'],
     transform : 'translate(-50%,-50%)',
     textTransform:'uppercase',
-    p:'4',
-    size:'4xl',
-    zIndex:1,
+    p: ['1','4'],
+    size:['1xl','4xl'],
+    zIndex:'1'
+    
     
 
     
@@ -28,7 +29,7 @@ const headingOptions= {
 
 const Home = () => {
   return (
-  <Box pointerEvents="auto">
+  <Box >
    <MyCarousel/>
    <Container maxW={"container.xl"} minH={'100vh'} p={['8', '16']} >
     <Heading textTransform={"uppercase"} w={"fit-content"} borderBottom={'2px solid'} m='auto' py='2'> Services</Heading> 
@@ -48,29 +49,32 @@ const Home = () => {
 
 
 const MyCarousel=()=>(
-    <Carousel w ="full" h={['100vh','120vh']}  autoPlay infiniteLoop interval={2000} showStatus={false} showThumbs={false} showArrows={false}>
-     <Box w ="full" h={'100vh'} overflowY="auto">
+    <Carousel  autoPlay infiniteLoop interval={2000} showStatus={false} showThumbs={false} showArrows={false} 
+     scrollswipeable={true} 
+    emulateTouch={true} 
+    dynamicHeight={true}>
+     <Box w ="full"  minH={'100vh'} >
         <Image src={img1} />
         <Heading  bgColor={"blackAlpha.600"} color={'white'} {...headingOptions}>
             Watch The Future
         </Heading>
 
      </Box>
-     <Box w ="full" h={'100vh'} overflowY="auto">
+     <Box w ="full" minH={'100vh'} >
         <Image src={img2} />
-        <Heading bgColor={"whiteAlpha.900"} color={'black'}  {...headingOptions}>
+        <Heading bgColor={"whiteAlpha.600"} color={'black'}  {...headingOptions}>
             Future Is Gaming
         </Heading>
 
      </Box>
-     <Box w ="full" h={'100vh'} overflowY="auto">
+     <Box w ="full" minH={'100vh'} >
         <Image src={img3} />
         <Heading bgColor={"whiteAlpha.600"} color={'black'}  {...headingOptions}>
             Gaming on console
         </Heading>
 
      </Box>
-     <Box w ="full" h={'100vh'} overflowY="auto">
+     <Box w ="full" minH={'100vh'} >
         <Image src={img4} />
         <Heading bgColor={"whiteAlpha.600"} color={'black'}  {...headingOptions}>
              Night Gaming 
